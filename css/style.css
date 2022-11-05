@@ -1,14 +1,14 @@
 :root {
-    --borderWidth: 7px;
-    --height: 24px;
-    --width: 12px;
+    --borderWidth: 0.36vmax;
+    --width: 0.7vmax;
     --borderColor: lightgoldenrodyellow;
     --color: saddlebrown;
     --backColor: gold;
-    --fontFamily: monospace;
+    --fontFamily: Rubik;
+    --height: 1.4vmax;
   }
 
-BODY {
+BODY, HTML {
     margin: 0;
     padding: 0;
     background-color:#e5e5e5;
@@ -19,25 +19,25 @@ H1 {
     color: var(--color);
     font-family: var(--fontFamily);
     text-align: center;
-    font-size: 36px;
+    font-size: 2vmax;
     text-shadow: 0 0 1px darkgoldenrod;
 }
 H1 > span {
     color: var(--color);
     font-family: var(--fontFamily);
     text-align: center;
-    font-size: 18px;
+    font-size: 50%;
     display: block;
 }
 
 BUTTON {
     display: inline-block;
-    width: 200px;
-    height: 50px;
+    width: 10vmax;
+    height: 3vmax;
     background-color: var(--backColor);
     border: 2px solid var(--borderColor);
     color: var(--color);
-    font-size: 18px;
+    font-size: 1vmax;
     letter-spacing: 1px;
     cursor: pointer;
     outline: none;
@@ -57,23 +57,18 @@ BUTTON:hover:not([disabled]) {
 }
 
 #main_container > div:first-child {
-    flex: 1 1 0%;
+    flex: 1 1 10%;
     background: linear-gradient(to right, rgba(229,229,229,.7), rgba(229,229,229,1)), url("../images/forest3.jpeg");
     background-size: cover;
 }
 #main_container > div:last-child {
-    flex: 1 1 0%;
+    flex: 1 1 10%;
     background: linear-gradient(to left, rgba(229,229,229,.7), rgba(229,229,229,1)), url("../images/forest2.jpeg");
     background-size: cover;
 }
 #main_container > div#main_content {    
     max-width: 1024px;
-    flex: 1 1 1024px;
-}
-#main_container > div:first-child {
-    
-    max-width: 1024px;
-    margin: 0 auto;
+    flex: 1 1 80%;
 }
 
 #info_container {
@@ -151,8 +146,8 @@ BUTTON:hover:not([disabled]) {
     background-image: url('../images/Stas.jpg');
 }
 .check_wrapper {
-    width: 40px;
-    height: 40px;
+    width: 2.2vmax;
+    height: 2.2vmax;
     background-color: var(--backColor);
     display: none;
 }
@@ -163,19 +158,19 @@ BUTTON:hover:not([disabled]) {
     width: var(--width);
     border-bottom: var(--borderWidth) solid var(--borderColor);
     border-right: var(--borderWidth) solid var(--borderColor);
-    margin-right: 10px;
+    margin-right: 22%;
   }
 .price {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 40px;
+    height: 2.2vmax;
     outline: 3px solid var(--backColor);
     background-color: var(--backColor);
     color: var(--color);
     text-align: center;
-    line-height: 40px;
-    font-size: 34px;
+    line-height: 2.2vmax;
+    font-size: 2vmax;
     font-family: var(--fontFamily);
     font-weight: bold;
     letter-spacing: 3px;
@@ -190,10 +185,18 @@ BUTTON:hover:not([disabled]) {
 .name {
     display: block;
     position: absolute;
-    bottom: 5px;
-    right: 5px;
+    top: 5px;
+    left: 5px;
     font-family: var(--fontFamily);
     font-size: 14px;
     font-weight: bold;
     color: var(--color);
+}
+@media screen and (max-width: 512px) {
+    .parts_container > div {
+        height: 200px;
+    }
+    .name {
+        font-size: 1.1vmax;
+    }
 }
